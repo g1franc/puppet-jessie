@@ -1,0 +1,7 @@
+# This files is managed by Puppet
+# /etc/apt/preferences.d/00-puppet.pref
+Package: puppet puppet-common
+Pin: version <%= scope.function_hiera(['global::PUPPET_VERSION']) %>
+Pin-Priority: 900
+
+# Need space between name and value and empty line at end of the block

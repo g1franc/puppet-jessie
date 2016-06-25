@@ -1,0 +1,7 @@
+---
+hosts::parameter_one: "COMMON value for parameter one"
+
+global::PUPPET_VERSION: "3.7.*"
+
+classes:
+  - files
