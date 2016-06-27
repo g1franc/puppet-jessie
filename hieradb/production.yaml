@@ -5,3 +5,6 @@ files::file_from_templates:
   etc_apt_preferences.d_00-puppet.pref:
     target: '/etc/apt/preferences.d/00-puppet.pref'
     template: 'etc_apt_preferences.d_00-puppet.pref'
+
+# Run apt-get update once a week
+packages::update_interval: "10080"

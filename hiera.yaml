@@ -2,7 +2,12 @@
 :backends:
   - yaml
 :hierarchy:
+  - "%{environment}/%{certname}"
   - "%{environment}/%{::certname}"
+  - "%{environment}/%{clientcert}"
+  - "%{environment}/%{::clientcert}"
+  - "%{environment}/%{hostname}"
+  - "%{environment}/%{::hostname}"
   - "%{environment}/%{calling_module}"
   - "%{environment}"
   - "common/%{calling_module}"

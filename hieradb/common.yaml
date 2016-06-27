@@ -5,3 +5,14 @@ global::PUPPET_VERSION: "3.7.*"
 
 classes:
   - files
+  - packages
+  - packages::htop
+  - packages::monit
+  - verbose
+
+files::file_from_versions:
+  usr_local_bin_monit:
+    target: '/usr/local/bin/monit'
+    version: '5.18-x86'
+    filename: 'monit'
+    mode: '700'
