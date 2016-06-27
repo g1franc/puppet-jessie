@@ -11,8 +11,8 @@ node /^raspberry\d+$/ {
 		content => "Only PRODUCTION raspberry servers get this file.\n",  
 	}
 
-# Include class declared through hiera
-hiera_include('classes')
+	# Include class declared through hiera
+	hiera_include('classes')
 }
 
 
