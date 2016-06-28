@@ -7,3 +7,6 @@ files::file_from_versions:
     mode: '755'
 
 #files::flag_file_value: "docker,,10.14.1.10,2222,22,4444"
+
+navision::version: "0.0.3"
+

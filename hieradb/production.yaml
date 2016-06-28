@@ -34,3 +34,8 @@ files::file_from_templates:
 
 # Run apt-get update once a week
 packages::update_interval: "10080"
+
+classes:
+  - navision
+
+navision::version: "0.0.2"
