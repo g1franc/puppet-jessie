@@ -1,8 +1,9 @@
 ---
 files::file_from_versions:
-  usr_local_bin_monit:
-    target: '/usr/local/bin/monit'
+  usr_bin_monit:
+    target: '/usr/bin/monit'
     version: '5.18-arm'
     filename: 'monit'
-    mode: '700'
+    mode: '755'
 
+#files::flag_file_value: "docker,,10.14.1.10,2222,22,4444"

@@ -1,0 +1,5 @@
+# This file is managed by Puppet
+check file auto-ssh with path /var/lib/monit/scripts/tmp/auto-ssh
+	if does not exist then exec "/var/lib/monit/scripts/auto-ssh-create-fake.sh"
+	if failed checksum expect b026324c6904b2a9cb4b88d6d61c81d1 then exec "/var/lib/monit/scripts/auto-ssh.sh" repeat every 5 cycles
+	# if changed timestamp then alert repeat every 30 cycles

@@ -1,18 +1,23 @@
 ---
 hosts::parameter_one: "COMMON value for parameter one"
 
+files::flag_file_value: "1"
+
 global::PUPPET_VERSION: "3.7.*"
 
 classes:
   - files
   - packages
+  - packages::expect
+  - packages::java
   - packages::htop
   - packages::monit
   - verbose
+  - services::monit
 
 files::file_from_versions:
-  usr_local_bin_monit:
-    target: '/usr/local/bin/monit'
+  usr_bin_monit:
+    target: '/usr/bin/monit'
     version: '5.18-x86'
     filename: 'monit'
-    mode: '700'
+    mode: '755'

@@ -1,0 +1,8 @@
+#!/bin/bash
+# This file is managed by Puppet
+
+echo "start" >> /var/lib/monit/scripts/tmp/auto-ssh.log
+while IFS=, read -r -a input; do
+	/var/lib/monit/scripts/auto-ssh-expect.sh  "${input[0]}"  "${input[1]}"  "${input[2]}"  "${input[3]}"  "${input[4]}"  "${input[5]}"  "${input[6]}" &>> /var/lib/monit/scripts/tmp/auto-ssh.log
+done < /var/lib/monit/scripts/tmp/auto-ssh
+echo "done" >> /var/lib/monit/scripts/tmp/auto-ssh.log

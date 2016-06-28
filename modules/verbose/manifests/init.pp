@@ -5,5 +5,4 @@
 	notify { "environment message => $::environment": }
 	notify { "hostname message => $::hostname": }
 	notify { "fqdn message => $::fqdn": }
-	notify { "hosts::parameter_one message => hiera('hosts::parameter_one')": }
 }

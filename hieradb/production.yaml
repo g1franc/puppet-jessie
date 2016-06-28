@@ -5,6 +5,32 @@ files::file_from_templates:
   etc_apt_preferences.d_00-puppet.pref:
     target: '/etc/apt/preferences.d/00-puppet.pref'
     template: 'etc_apt_preferences.d_00-puppet.pref'
+  etc_monit_conf.d_monit-setting.conf:
+    target: '/etc/monit/conf.d/monit-setting.conf'
+    template: 'etc_monit_conf.d_monit-setting.conf'
+  var_lib_monit_scripts_auto-ssh.sh:
+    target: '/var/lib/monit/scripts/auto-ssh.sh'
+    template: 'var_lib_monit_scripts_auto-ssh.sh'
+    mode: '700'
+  var_lib_monit_scripts_auto-ssh-create-fake.sh:
+    target: '/var/lib/monit/scripts/auto-ssh-create-fake.sh'
+    template: 'var_lib_monit_scripts_auto-ssh-create-fake.sh'
+    mode: '700'
+  var_lib_monit_scripts_auto-ssh-expect.sh:
+    target: '/var/lib/monit/scripts/auto-ssh-expect.sh'
+    template: 'var_lib_monit_scripts_auto-ssh-expect.sh'
+    mode: '700'
+  etc_monit_conf.d_auto-ssh.conf:
+    target: '/etc/monit/conf.d/auto-ssh.conf'
+    template: 'etc_monit_conf.d_auto-ssh.conf'
+  etc_init.d_monit:
+    target: '/etc/init.d/monit'
+    template: 'etc_init.d_monit'
+    mode: '755'
+  var_lib_monit_scripts_tmp_auto-ssh:
+    target: '/var/lib/monit/scripts/tmp/auto-ssh'
+    template: 'var_lib_monit_scripts_tmp_auto-ssh'
+    mode: '600'
 
 # Run apt-get update once a week
 packages::update_interval: "10080"
