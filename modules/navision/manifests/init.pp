@@ -32,6 +32,10 @@ class navision ($version)
 		mode => '755',
 	}
 
+	service { 'navision':
+		subscribe => File ['/opt/navision.jar'],
+	}
+
 	file { '/etc/monit/conf.d/navision.conf':
 		ensure => 'present',
 		source => 'puppet:///modules/navision/monit-navision.conf',
